@@ -128,7 +128,6 @@ namespace AdvancedTask_NUnit.Tests
             Assert.That(notifications.Count, Is.EqualTo(0));
             test.Pass(" selected notifications are deleted");
 
-
         }
     }
 }
