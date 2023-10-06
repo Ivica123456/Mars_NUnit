@@ -31,6 +31,7 @@
 
   <ItemGroup>
     <Folder Include="ExtentReports\" />
+    <Folder Include="Manual Test\" />
   </ItemGroup>
 
 </Project>

@@ -42,9 +42,6 @@ namespace AdvancedTask_NUnit.Pages
             driver.Navigate().Refresh();
 
             
-
-
-
         }
         public string actaulAvailability()
         {
@@ -95,7 +92,6 @@ namespace AdvancedTask_NUnit.Pages
             driver.Navigate().Refresh();
            
             
-
         }
         public string actualEarnTarget ()
         {

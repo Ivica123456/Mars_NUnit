@@ -46,10 +46,8 @@ namespace AdvancedTask_NUnit.Utilities
             languagePage = new LanguagePage();
             dashboardObj = new DashboardPage();
             skillsPageObj = new SkillsPage();
-            
            
-
-
+          
         }
         //Extent Reports configuration for my tests store in CommonDriver part2 start:
 

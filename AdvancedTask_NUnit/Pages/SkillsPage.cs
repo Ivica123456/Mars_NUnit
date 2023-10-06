@@ -78,8 +78,6 @@ namespace AdvancedTask_NUnit.Pages
             updateButton.Click();
 
 
-
-
         }
         public string getEditSkill()
         {
