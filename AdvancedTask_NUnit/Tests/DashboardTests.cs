@@ -120,7 +120,7 @@ namespace AdvancedTask_NUnit.Tests
             dashboardObj.deleteSelection();
 
 
-            // Get all the elements of the notifications.
+            //// Get all the elements of the notifications.
 
             IList<IWebElement> notifications = driver.FindElements(By.CssSelector(".notification"));
 
