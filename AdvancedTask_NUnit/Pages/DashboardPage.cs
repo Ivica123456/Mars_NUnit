@@ -24,6 +24,7 @@ namespace AdvancedTask_NUnit.Pages
         public DashboardPage()
         {
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+            
         }
         public void notificationsSelectAll()
         {
@@ -104,6 +105,10 @@ namespace AdvancedTask_NUnit.Pages
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[1]/div[3]")));
             // Click on the "Delete selection" button.
             deleteSelectionButton.Click();
+
+            
+
+
 
 
 

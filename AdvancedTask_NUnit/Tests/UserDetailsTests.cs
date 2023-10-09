@@ -5,8 +5,6 @@ using Newtonsoft.Json;
 
 
 
-
-
 namespace AdvancedTask_NUnit.Tests
 {
     public class UserDetailsTests : CommonDriver
@@ -85,7 +83,6 @@ namespace AdvancedTask_NUnit.Tests
             test.Pass("Earn target value verified.");
         }
        
-
 
 
     }
