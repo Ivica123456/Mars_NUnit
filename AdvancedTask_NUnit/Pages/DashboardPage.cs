@@ -19,12 +19,12 @@ namespace AdvancedTask_NUnit.Pages
         private IWebElement unselectAllButton => driver.FindElement(By.CssSelector(".ui.icon.basic.button.button-icon-style"));
         private IWebElement deleteSelectionButton => driver.FindElement(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[1]/div[3]"));
         private IWebElement loadMoreButton => driver.FindElement(By.XPath("//a[@class='ui button' and text()='Load More...']"));
-        private  IWebElement showLessButton => driver.FindElement(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[2]/span/span/div/div[8]/div[1]/center/a"));
+        private IWebElement showLessButton => driver.FindElement(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[2]/span/span/div/div[8]/div[1]/center/a"));
 
         public DashboardPage()
         {
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
-            
+
         }
         public void notificationsSelectAll()
         {
@@ -42,7 +42,7 @@ namespace AdvancedTask_NUnit.Pages
             dashboardButton.Click();
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[1]/div[1]")));
             selectAllButton.Click();
-                       
+
             // Click on the "Unselect all" button.
             unselectAllButton.Click();
 
@@ -55,16 +55,16 @@ namespace AdvancedTask_NUnit.Pages
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[1]/div[1]")));
             selectAllButton.Click();
 
-            
+
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[1]/div[4]")));
             markSelectionAsReadButton.Click();
 
         }
-        public void loadMoreNotifications() 
+        public void loadMoreNotifications()
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id=\"account-profile-section\"]/div/section[1]/div/a[1]")));
             dashboardButton.Click();
-            
+
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a[@class='ui button' and text()='Load More...']")));
             loadMoreButton.Click();
 
@@ -80,7 +80,7 @@ namespace AdvancedTask_NUnit.Pages
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id=\"account-profile-section\"]/div/section[1]/div/a[1]")));
             dashboardButton.Click();
-            
+
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a[@class='ui button' and text()='Load More...']")));
             loadMoreButton.Click();
 
@@ -106,14 +106,9 @@ namespace AdvancedTask_NUnit.Pages
             // Click on the "Delete selection" button.
             deleteSelectionButton.Click();
 
-            
-
-
-
-
-
-
+           
         }
+       
+       
     }
-
 }

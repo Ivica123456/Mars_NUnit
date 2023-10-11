@@ -1,4 +1,5 @@
-﻿using AdvancedTask_NUnit.DataModel;
+﻿using AdvancedTask_NUnit.AssertHelper;
+using AdvancedTask_NUnit.DataModel;
 using AdvancedTask_NUnit.Pages;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
@@ -23,6 +24,7 @@ namespace AdvancedTask_NUnit.Utilities
         public DashboardPage dashboardObj;
         public SkillsPage skillsPageObj;
         public SearchSkillsPage searchSkillsPageObj;
+        public AssertPage assertPageObj;
 
         //Extent Reports configuration for my tests store in CommonDriver part1 starts:
         public ExtentReports extent;
@@ -48,8 +50,11 @@ namespace AdvancedTask_NUnit.Utilities
             dashboardObj = new DashboardPage();
             skillsPageObj = new SkillsPage();
             searchSkillsPageObj = new SearchSkillsPage();
-           
-          
+            assertPageObj = new AssertPage();
+
+
+
+
         }
         //Extent Reports configuration for my tests store in CommonDriver part2 start:
 
