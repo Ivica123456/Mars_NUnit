@@ -19,9 +19,14 @@ namespace AdvancedTask_NUnit.Tests
         {
             // Log the test step in the Extent Report
             test.Info("Starting verifySelectedAllNotitications ...");
+            
+
            
+            //test.Pass(" SelectedAllNotitications verified.");
             dashboardObj.notificationsSelectAll();
-            assertPageObj.assertSelectedAllNotitications();
+            //Check all notifications are selected
+            var success = dashboardObj.IsnotificationsSelectAll();
+            Assert.IsTrue(success);
             test.Pass(" SelectedAllNotitications verified.");
 
         }
@@ -30,10 +35,12 @@ namespace AdvancedTask_NUnit.Tests
         {
             // Log the test step in the Extent Report
             test.Info("Starting Verify that no notifications are selected...");
-           
+            
+
             dashboardObj.notificationsUnselectAll();
-            assertPageObj.assertUnselectAll();
-           
+            var success = dashboardObj.IsnotificationsUnselectAll();
+            Assert.IsTrue(success);
+
             test.Pass(" No notifications are selected verified.");
         }
         [Test, Order(3), Description("Verify that the selected notifications are marked as read")]
@@ -43,7 +50,8 @@ namespace AdvancedTask_NUnit.Tests
             test.Info("Starting selected notifications are marked as read...");
 
             dashboardObj.markAllSelectedAsRead();
-            assertPageObj.assertMarkSelectionAsRead();
+            var success = dashboardObj.IsmarkAllSelectedAsRead();
+            Assert.IsTrue(success);
             test.Pass("  notifications are marked as read.");
         }
 
@@ -54,11 +62,12 @@ namespace AdvancedTask_NUnit.Tests
         {
             // Log the test step in the Extent Report
             test.Info("Starting selected notifications are loaded ...");
-           
-            dashboardObj.loadMoreNotifications();
-            assertPageObj.assertloadMoreNotifications();
 
-           
+            dashboardObj.loadMoreNotifications();
+            var success = dashboardObj.IsloadMoreNotifications();
+            Assert.IsTrue(success);
+            test.Pass("  notifications are load more.");
+
         }
 
         [Test, Order(5), Description("Verify that less notifications are loaded.")]
@@ -69,9 +78,10 @@ namespace AdvancedTask_NUnit.Tests
             test.Info("Starting selected less notifications are loaded ...");
 
             dashboardObj.showLessNotifications();
-            assertPageObj.assertShowLessNotifications();
+            var success = dashboardObj.IsshowLessNotifications();
+            Assert.IsTrue(success);
+            test.Pass("  notifications are show less.");
 
-           
         }
 
 
@@ -80,11 +90,13 @@ namespace AdvancedTask_NUnit.Tests
         {
             // Log the test step in the Extent Report
             test.Info("Starting that the selected notifications are deleted ...");
-                        
-            dashboardObj.deleteSelection();
-            assertPageObj.assertDashboardNotificationDelete();
 
-            
+            dashboardObj.deleteSelection();
+            var success = dashboardObj.IsdeleteSelection();
+            Assert.IsTrue(success);
+            test.Pass("  notifications are deleted");
+
+
         }
     }
 }

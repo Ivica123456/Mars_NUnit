@@ -37,6 +37,7 @@ namespace AdvancedTask_NUnit.Tests
 
             
             skillsPageObj.AddSkills(skillsDataModel);
+            
 
             
             Assert.That(skillsPageObj.getAddSkill(), Is.EqualTo(name), "Title should match the expected value.");
