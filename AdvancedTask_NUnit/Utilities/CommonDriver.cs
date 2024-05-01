@@ -24,12 +24,12 @@ namespace AdvancedTask_NUnit.Utilities
         public DashboardPage dashboardObj;
         public SkillsPage skillsPageObj;
         public SearchSkillsPage searchSkillsPageObj;
-        
+
         //Extent Reports configuration for my tests store in CommonDriver part1 starts:
         public ExtentReports extent;
         public ExtentTest test;
-        
-        
+
+
 
         public void Initialize()
         {
@@ -49,7 +49,7 @@ namespace AdvancedTask_NUnit.Utilities
             dashboardObj = new DashboardPage();
             skillsPageObj = new SkillsPage();
             searchSkillsPageObj = new SearchSkillsPage();
-            
+
 
 
 
@@ -99,7 +99,8 @@ namespace AdvancedTask_NUnit.Utilities
 
         private string TakeScreenshot()
         {
-            string screenshotDir = "C:\\Users\\Ivica\\Desktop\\AdvancedTask-NUnit\\AdvancedTask_NUnit\\AdvancedTask_NUnit\\ExtentReports\\";
+
+            string screenshotDir = "D:\\Industry Connect\\AdvancedTask-NUnit\\AdvancedTask_NUnit\\AdvancedTask_NUnit\\ExtentReports\\";
             Directory.CreateDirectory(screenshotDir);
             string screenshotPath = Path.Combine(screenshotDir, $"{TestContext.CurrentContext.Test.Name}.png");
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);

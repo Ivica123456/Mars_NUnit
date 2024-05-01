@@ -25,14 +25,17 @@ namespace AdvancedTask_NUnit.Pages
         public void goToProfilePage()
         {
 
+            string username = Environment.GetEnvironmentVariable("MarsEmail");
+            string password = Environment.GetEnvironmentVariable("MarsPassword");
+
 
             IWebElement signInButton = driver.FindElement(By.XPath("//*[@id=\"home\"]/div/div/div[1]/div/a"));
             signInButton.Click();
 
             IWebElement emailAddressTextBox = driver.FindElement(By.Name("email"));
-            emailAddressTextBox.SendKeys("ivica.cuncic@gmail.com");
+            emailAddressTextBox.SendKeys(username);
             IWebElement passwordTexbox = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
-            passwordTexbox.SendKeys("mars123");
+            passwordTexbox.SendKeys(password);
             IWebElement loginButton = driver.FindElement(By.CssSelector("body > div.ui.page.modals.dimmer.transition.visible.active > div > div > div:nth-child(1) > div > div:nth-child(5) > button"));
             loginButton.Click();
 
