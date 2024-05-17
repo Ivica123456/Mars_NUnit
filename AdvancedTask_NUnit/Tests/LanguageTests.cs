@@ -119,7 +119,6 @@ namespace AdvancedTask_NUnit.Tests
                 }
 
 
-
                 Assert.That(languageRow, Is.Null, $"The language '{language}' was not deleted.");
                 test.Pass(" value verified DeleteLanguagesTest.");
             }

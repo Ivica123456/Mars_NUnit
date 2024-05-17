@@ -102,11 +102,7 @@ namespace AdvancedTask_NUnit.Pages
             foreach (IWebElement deleteButton in deleteButtons)
             {
                 deleteButton.Click();
-                // Handle any confirmation dialog if necessary
-
-
-
-
+               
             }
             // Refresh the page
             driver.Navigate().Refresh();

@@ -42,7 +42,6 @@ namespace AdvancedTask_NUnit.Pages
             loginButton.Click();
 
 
-
         }
 
     }
