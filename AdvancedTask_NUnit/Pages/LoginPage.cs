@@ -24,8 +24,12 @@ namespace AdvancedTask_NUnit.Pages
         }
         public void goToProfilePage()
         {
+
             string username = Environment.GetEnvironmentVariable("MarsEmail");
             string password = Environment.GetEnvironmentVariable("MarsPassword");
+
+
+          
 
             IWebElement signInButton = driver.FindElement(By.XPath("//*[@id=\"home\"]/div/div/div[1]/div/a"));
             signInButton.Click();
