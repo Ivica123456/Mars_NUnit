@@ -25,7 +25,7 @@ namespace AdvancedTask_NUnit.Tests
             // Log the test step in the Extent Report
             test.Info("Starting AddSkillTests");
             // Read the JSON file
-            string jsonFilePath = "C:\\Users\\Ivica\\Desktop\\AdvancedTask-NUnit\\AdvancedTask_NUnit\\AdvancedTask_NUnit\\JsonData\\skills.json";
+            string jsonFilePath = "D:\\Industry Connect\\Mars_NUnit\\AdvancedTask_NUnit\\AdvancedTask_NUnit\\JsonData\\skills.json";
             string jsonContent = File.ReadAllText(jsonFilePath);
 
             // Deserialize the JSON into the RegisterModel object
@@ -54,7 +54,7 @@ namespace AdvancedTask_NUnit.Tests
             // Log the test step in the Extent Report
             test.Info("Starting AddSkillTests");
             // Read the JSON file
-            string jsonFilePath = "C:\\Users\\Ivica\\Desktop\\AdvancedTask-NUnit\\AdvancedTask_NUnit\\AdvancedTask_NUnit\\JsonData\\editSkills.json";
+            string jsonFilePath = "D:\\Industry Connect\\Mars_NUnit\\AdvancedTask_NUnit\\AdvancedTask_NUnit\\JsonData\\editSkills.json";
             string jsonContent = File.ReadAllText(jsonFilePath);
 
             // Deserialize the JSON into the RegisterModel object
@@ -66,6 +66,8 @@ namespace AdvancedTask_NUnit.Tests
 
 
             skillsPageObj.editSkill(skillsDataModel);
+
+
 
 
             Assert.That(skillsPageObj.getEditSkill(), Is.EqualTo(name), "Title should match the expected value.");
