@@ -29,6 +29,8 @@ namespace AdvancedTask_NUnit.Pages
             string password = Environment.GetEnvironmentVariable("MarsPassword");
 
 
+          
+
             IWebElement signInButton = driver.FindElement(By.XPath("//*[@id=\"home\"]/div/div/div[1]/div/a"));
             signInButton.Click();
 
